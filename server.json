@@ -1,0 +1,84 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 12000,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburger",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 59,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 3,
+      "description": "Aluguel do apartamento",
+      "type": "outcome",
+      "category": "Casa",
+      "price": 1200,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 4,
+      "description": "Computador",
+      "type": "income",
+      "category": "Venda",
+      "price": 5400,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 5,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 8000,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 6,
+      "description": "Jantar",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 39,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 7,
+      "description": "Aluguel do apartamento",
+      "type": "outcome",
+      "category": "Casa",
+      "price": 1200,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 8,
+      "description": "Salário",
+      "type": "income",
+      "category": "Salário",
+      "price": 5400,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 9,
+      "description": "Almoço",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 30,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    },
+    {
+      "id": 10,
+      "description": "Fone de ouvido",
+      "type": "outcome",
+      "category": "Itens",
+      "price": 150,
+      "createdAt": "2022-09-19T21:40:13.124Z"
+    }
+  ]
+}
