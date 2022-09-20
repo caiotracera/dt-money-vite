@@ -2,15 +2,19 @@ import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useContextSelector } from 'use-context-selector';
 
-import { useTransactions } from '@/contexts/TransactionsContext';
+import { TransactionContext } from '@/contexts/TransactionsContext';
 
 import { NewTransactionFormInputs } from '@/components/NewTransactionModal/types';
 import { newTransactionFormSchema } from '@/components/NewTransactionModal/schema';
 import * as S from '@/components/NewTransactionModal/styles';
 
 export function NewTransactionModal() {
-  const { createTransaction } = useTransactions();
+  const createTransaction = useContextSelector(
+    TransactionContext,
+    (context) => context.createTransaction,
+  );
 
   const {
     control,
