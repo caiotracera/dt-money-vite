@@ -9,6 +9,7 @@ export type Transaction = {
 
 export type TransactionContextType = {
   transactions: Transaction[];
+  fetchTransactions: (query?: string) => Promise<void>;
 };
 
 export type TransactionsProviderProps = {

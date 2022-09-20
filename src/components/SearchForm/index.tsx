@@ -5,8 +5,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { SearchFormInputs } from '@/components/SearchForm/types';
 import { searchFormSchema } from '@/components/SearchForm/schema';
 import * as S from '@/components/SearchForm/styles';
+import { useTransactions } from '@/contexts/TransactionsContext';
 
 export function SearchForm() {
+  const { fetchTransactions } = useTransactions();
+
   const {
     register,
     handleSubmit,
@@ -17,9 +20,7 @@ export function SearchForm() {
 
   async function handleSearchTransactions(data: SearchFormInputs) {
     // eslint-disable-next-line no-promise-executor-return
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    console.log({ data });
+    await fetchTransactions(data.query);
   }
 
   return (
