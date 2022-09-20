@@ -87,14 +87,6 @@
       "type": "outcome",
       "createdAt": "2022-09-20T21:14:29.644Z",
       "id": 11
-    },
-    {
-      "description": "asd",
-      "category": "Venda",
-      "price": 1,
-      "type": "income",
-      "createdAt": "2022-09-20T21:15:49.321Z",
-      "id": 12
     }
   ]
 }
