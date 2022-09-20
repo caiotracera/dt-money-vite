@@ -19,7 +19,6 @@ export function SearchForm() {
   });
 
   async function handleSearchTransactions(data: SearchFormInputs) {
-    // eslint-disable-next-line no-promise-executor-return
     await fetchTransactions(data.query);
   }
 

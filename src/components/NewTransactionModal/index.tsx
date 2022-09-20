@@ -3,14 +3,19 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
+import { useTransactions } from '@/contexts/TransactionsContext';
+
 import { NewTransactionFormInputs } from '@/components/NewTransactionModal/types';
 import { newTransactionFormSchema } from '@/components/NewTransactionModal/schema';
 import * as S from '@/components/NewTransactionModal/styles';
 
 export function NewTransactionModal() {
+  const { createTransaction } = useTransactions();
+
   const {
     control,
     register,
+    reset,
     handleSubmit,
     formState: { isSubmitting },
   } = useForm<NewTransactionFormInputs>({
@@ -21,10 +26,9 @@ export function NewTransactionModal() {
   });
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
-    // eslint-disable-next-line no-promise-executor-return
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await createTransaction(data);
 
-    console.log({ data });
+    reset();
   }
 
   return (

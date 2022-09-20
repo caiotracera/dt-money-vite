@@ -7,9 +7,16 @@ export type Transaction = {
   createdAt: string;
 };
 
+export type CreateTransactionInput = {
+  description: string;
+  type: 'income' | 'outcome';
+  category: string;
+  price: number;
+};
 export type TransactionContextType = {
   transactions: Transaction[];
   fetchTransactions: (query?: string) => Promise<void>;
+  createTransaction: (transaction: CreateTransactionInput) => Promise<void>;
 };
 
 export type TransactionsProviderProps = {
