@@ -5,6 +5,7 @@ import { Summary } from '@/components/Summary';
 import { useTransactions } from '@/contexts/TransactionsContext';
 
 import * as S from '@/pages/Transactions/styles';
+import { dateFormatter, priceFormatter } from '@/utils/formatter';
 
 export function Transactions() {
   const { transactions } = useTransactions();
@@ -22,11 +23,11 @@ export function Transactions() {
                 <td>{transaction.description}</td>
                 <td>
                   <S.PriceHighlight type={transaction.type}>
-                    {transaction.price}
+                    {priceFormatter.format(transaction.price)}
                   </S.PriceHighlight>
                 </td>
                 <td>{transaction.category}</td>
-                <td>{transaction.createdAt}</td>
+                <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
               </tr>
             ))}
           </tbody>

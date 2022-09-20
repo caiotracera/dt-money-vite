@@ -2,7 +2,6 @@ import * as Dialog from '@radix-ui/react-dialog';
 
 import logoImg from '@/assets/images/logo.svg';
 import { NewTransactionModal } from '@/components/NewTransactionModal';
-
 import * as S from '@/components/Header/styles';
 
 export function Header() {
