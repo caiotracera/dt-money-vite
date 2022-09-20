@@ -34,10 +34,15 @@ export const Wrapper = styled.form`
       cursor: pointer;
       transition: background, border, color 0.2s;
 
-      &:hover {
+      &:not(:disabled):hover {
         background: ${theme.colors['green-500']};
         border: 1px solid ${theme.colors['green-500']};
         color: ${theme.colors.white};
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
       }
     }
   `}
